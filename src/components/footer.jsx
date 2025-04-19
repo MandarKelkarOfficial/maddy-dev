@@ -13,20 +13,20 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://github.com/MandarKelkarOfficial" className="text-[#16f2b3]">Mandar Kelkar</Link>
+            © Developer Portfolio by <Link  to="https://github.com/MandarKelkarOfficial" className="text-[#16f2b3]">Mandar Kelkar</Link>
           </p>
           <div className="flex items-center gap-5">
             <Link
-              target="_blank"
-              href="https://github.com/MandarKelkarOfficial"
+           
+              to="https://github.com/MandarKelkarOfficial/maddy-dev"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
               <IoStar />
               <span>Star</span>
             </Link>
             <Link
-              target="_blank"
-              href="https://github.com/said7388/developer-portfolio/fork"
+             
+              to="https://github.com/MandarKelkarOfficial/maddy-dev/fork"
               className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
             >
               <CgGitFork />

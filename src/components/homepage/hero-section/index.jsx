@@ -13,11 +13,13 @@ import { Typed } from "react-typed";
 import TypedText from "../../TypedText";
 
 function HeroSection() {
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "../../../../public/Mandar.pdf"; // path to your file in /public
-    link.download = "Resume.pdf";
+  const handleDownload = (cvPath) => {
+    const link = document.createElement('a');
+    link.href = cvPath;                                 // relative path you’ll pass in
+    link.download = cvPath.split('/').pop();           // grabs “foo.pdf” from “/resumes/foo.pdf”
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
   return (
     <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
@@ -34,54 +36,46 @@ function HeroSection() {
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Hello, <br />
             This is <span className=" text-pink-500">{personalData.name}</span>
-            {` , I'm a Professional `} <br />
-            <TypedText className="text-[#16f2b3] font-bold lg:text-[2.6rem] lg:leading-[3.5rem]" />
+            {` , I'm a Passionate `} <br />
+            <TypedText className="text-[#16f2b3] font-bold lg:text-[2rem] lg:leading-[3rem]" />
 .
           </h1>
 
           <div className="my-12 flex justify items-center gap-5">
             <Link
-              href={personalData.github}
-              target="_blank"
+              to={personalData.github}
+            
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <BsGithub size={30} />
             </Link>
             <Link
-              href={personalData.linkedIn}
-              target="_blank"
+              to={personalData.linkedIn}
+              target=""
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <BsLinkedin size={30} />
             </Link>
+
             <Link
-              href={personalData.facebook}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaFacebook size={30} />
-            </Link>
-            <Link
-              href={personalData.leetcode}
-              target="_blank"
+              to={personalData.leetcode}
+              target=""
               className="transition-all text-pink-500 hover:scale-125 duration-300"
             >
               <SiLeetcode size={30} />
             </Link>
-            <Link
-              href={personalData.twitter}
-              target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
+
           </div>
 
           <div className="flex items-center justify-center">
             <Link
               className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
               role="button"
-              onClick={{ handleDownload }}
+              onClick={(e) => {
+                e.preventDefault();         // prevent normal navigation
+                handleDownload(personalData.resume); // pass in the path to your file
+              }}
+              to="#"   
             >
               <span>Get Resume</span>
               <MdDownload size={16} />
