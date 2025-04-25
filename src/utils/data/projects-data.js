@@ -7,15 +7,17 @@ export const projectsData = [
         role: 'Backend Developer',
         code: '',
         demo: '',
+        link:'https://github.com/MandarKelkarOfficial/TeleMedX.git',
     },
     {
         id: 2,
-        name: 'MFA Security for Global Bank Online Banking Platform',
+        name: 'Multi‑Factor Authentication System',
         description: "I developed a robust Multi-Factor Authentication (MFA) system using Flask, which significantly enhanced the security of an online banking platform and led to a 45% reduction in unauthorized access incidents. The system featured secure access control, ensuring that only authenticated users with valid credentials could access specific functionalities or pages.",
         tools: ['Flask', 'Sqlite', 'PostgreSQL', 'Python', 'Virtualenv', 'SMTP','GitHub'],
         role: 'Project Admin',
         code: '',
         demo: '',
+        link:'https://github.com/MandarKelkarOfficial/MFA.git',
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ export const projectsData = [
         code: '',
         role: 'Blockchain Developer , Backend Developer',
         demo: '',
+        link:'https://github.com/MandarKelkarOfficial/eduplus.git',
     },
     {
         id: 4,
@@ -34,6 +37,7 @@ export const projectsData = [
         code: '',
         demo: '',
         role: 'Full Stack Developer',
+        link:'https://github.com/MandarKelkarOfficial/Manager-master.git',
     }
 ];
 

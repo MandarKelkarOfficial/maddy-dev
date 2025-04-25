@@ -11,6 +11,7 @@ import Skills from "./components/homepage/skills";
 import RootLayout from "./layout"; // Import your layout
 import './App.css';
 import '../src/styles/tailwind.css';
+import CertificateList from "./components/homepage/Certificate/CertificateList";
 // import ContactForm from "./components/homepage/contact/ContactForm";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Skills />
         <Projects />
         <Education />
+        <CertificateList/>
         {/* <ContactForm/> */}
         <ContactSection />
       </RootLayout>
