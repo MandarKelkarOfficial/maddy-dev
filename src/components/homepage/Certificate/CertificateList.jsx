@@ -1,6 +1,7 @@
 import React from 'react';
 import CertificateCard from './CertificateCard';
 import {certifications} from '../../../utils/data/Certificate';
+import '../../../styles/css/sidebarend.css';
 
 function CertificateList() {
   return (

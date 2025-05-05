@@ -13,6 +13,7 @@ import './App.css';
 import '../src/styles/tailwind.css';
 import CertificateList from "./components/homepage/Certificate/CertificateList";
 // import ContactForm from "./components/homepage/contact/ContactForm";
+import '../src/styles/css/sidebarend.css';
 
 function App() {
   return (

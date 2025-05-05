@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
+import '../../../styles/css/sidebarend.css';
 
 function CertificateCard({ cert }) {
   const isPdf = cert.link.toLowerCase().endsWith('.pdf');
